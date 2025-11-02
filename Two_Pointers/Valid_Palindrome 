@@ -1,0 +1,30 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+
+        tokens = []
+        
+        for word in s:
+            if(word.isalnum()):
+                tokens.append(word.lower())
+
+        
+        reversed_tokens = list(reversed(tokens))
+        print(reversed_tokens)
+        print(tokens)
+
+        if(tokens == reversed_tokens):
+            print("True")
+            return True
+        
+        return False
+        
+
+   
+def main():
+    # Your code here
+    solution = Solution()
+    solution.isPalindrome("A man, a plan, a canal: Panama")
+
+if __name__ == "__main__":
+    main()
+        
