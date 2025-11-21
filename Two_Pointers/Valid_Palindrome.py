@@ -24,6 +24,7 @@ def main():
     # Your code here
     solution = Solution()
     solution.isPalindrome("A man, a plan, a canal: Panama")
+    print("A")
 
 if __name__ == "__main__":
     main()
