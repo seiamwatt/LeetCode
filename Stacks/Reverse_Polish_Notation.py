@@ -28,8 +28,6 @@ class Solution:
                     temp1 = stack_nums.pop()
                     temp2 = stack_nums.pop()
                     stack_nums.append(temp1 * temp2)
-
-
         return stack_nums.pop()
                     
 
