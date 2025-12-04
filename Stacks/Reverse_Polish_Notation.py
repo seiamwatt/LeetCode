@@ -7,8 +7,7 @@ class Solution:
 
             if(token not in ["+","-","/","*"]):
                 stack_nums.append(int(token))
-            else:
-                
+            else: 
                 if(token == "+"):
                     temp1 = stack_nums.pop()
                     temp2 = stack_nums.pop()

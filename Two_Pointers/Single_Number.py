@@ -11,7 +11,6 @@ class Solution:
 
         for index in range(len(nums) - 1):
             
-
             if(nums[index] == last_index):
                 continue
 
