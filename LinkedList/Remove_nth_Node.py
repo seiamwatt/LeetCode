@@ -27,7 +27,6 @@ class Solution:
         prev = None
         index = 0
 
-
         while(curr is not None):
             #   a -> b -> c
 
