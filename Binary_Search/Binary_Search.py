@@ -15,9 +15,7 @@ class Solution:
 
             elif nums[mid] > target:
                 high = mid - 1
-
-            
-
+                
         return -1
 
 
