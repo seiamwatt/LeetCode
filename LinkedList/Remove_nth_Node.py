@@ -1,48 +1,61 @@
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
 
-        if(head is None):
-            return None
-        
-        curr = head
-        length = 0
-        prev = None
+        list_len = 0
+
+        curr_node = head
+
+        while curr_node is not None:
+            list_len += 1
+            curr_node = curr_node.next
+           
+
+        remove_index = list_len - n -1
+
+        curr_node = head
+        dummy_node = ListNode(0,head)
         index = 0
-        null_pointer = None
 
-        while(curr is not None):
-
-            length += 1
-            curr = curr.next
-
+        if list_len == 1:
+            dummy_node = ListNode(0,None)
+            return dummy_node.next
         
-        remove_index = (length - n) 
+        if remove_index == 0:
+            temp = curr_node.next.next
 
-        if(remove_index == 0):
-            head = head.next
+            next_node = curr_node.next
+            next_node.next = None
+            curr_node.next = temp
+
             return head
+        
+        if remove_index == -1:
+            dummy_node.next = head.next
+            return dummy_node.next
+    
+        while curr_node is not None:
 
+            if index == remove_index:
+                temp = curr_node.next.next
 
-        curr = head
-        prev = None
-        index = 0
-
-        while(curr is not None):
-            #   a -> b -> c
-
-            if(index == remove_index):
-               next_node = curr.next
-               prev.next = next_node 
-               break
-               
-
-            prev = curr
-            curr = curr.next
+                next_node = curr_node.next
+                next_node.next = None
+                curr_node.next = temp 
             index += 1
+            curr_node = curr_node.next
+
+        return dummy_node.next
 
 
-        return head
-            
+
+
+
+
+
+
+
+
+
 
 
 
